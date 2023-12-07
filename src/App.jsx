@@ -1,9 +1,17 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import MasterLayout from "./components/masterLayout/MasterLayout";
+
+
 
 const App = () => {
   return(
     <>
-      <h2>hello world</h2>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MasterLayout />} /> 
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
