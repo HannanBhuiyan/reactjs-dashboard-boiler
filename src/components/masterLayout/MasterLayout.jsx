@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes, faEnvelope, faBell, faCheck, faChevronRight, faReceipt, faPowerOff, faGauge, faCartShopping, faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import admin_img from '../../assets/images/admin.jpg';
-import media_icon from '../../assets/images/media-icon-img.png';
+import admin_img from '../../assets/images/admin.jpg'; 
 
 
 const MasterLayout = () => {
@@ -14,6 +14,7 @@ const MasterLayout = () => {
     const [admin, setAdmin] = useState(false)
     const [notification, setNitification] = useState(false)
     const [message, setMessage] = useState(false)
+    const [subMenu, setSubMenu] = useState(false)
 
 
     const adminHandler = () => {
@@ -46,6 +47,11 @@ const MasterLayout = () => {
         } 
     }
 
+    const subMenuHandler = () => {
+        setSubMenu((prevSub) => !prevSub)
+    }
+
+
     return(
         <>
             <div className="main_section flex " >
@@ -59,29 +65,50 @@ const MasterLayout = () => {
                                 <div onClick={() => setSidebar(false)} className="bar_icon text-[22px] cursor-pointer text-white "><FontAwesomeIcon icon={faBars} /></div>
                             </div>
                         </div>
-                        <div className="sidebar_menu text-white py-[20px]">
+                        <div className="sidebar_menu text-white pb-[20px]">
                             <ul>
-                                <li className="text-[17px] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[8px] mb-[5px] " >
+                                <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] " >
                                     <NavLink className="flex items-center">
                                         <FontAwesomeIcon icon={faGauge} />
-                                        <span className="pl-[12px] py-[8px] w-full block">Dashboard</span> 
+                                        <span className="pl-[12px] py-[8px] w-full block">Dashboard</span>
                                     </NavLink>
                                 </li>
-                                <li className="text-[17px] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[10px] mb-[5px] " >
+                                <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] " >
                                     <NavLink className="flex items-center">
                                         <FontAwesomeIcon icon={faCartShopping} />
                                         <span className="pl-[12px] py-[8px] w-full block">Product</span> 
                                     </NavLink>
                                 </li>
-                                <li className="text-[17px] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[10px] mb-[5px] " >
+                                <li onClick={subMenuHandler} className={`text-[17px] font-robotoFont py-[5px] border-b border-1 border-[#021933] ${subMenu === false ? "hover:bg-[#051f3e]" : ''} `} >
                                     <NavLink className="flex justify-between items-center">
-                                        <div className="m-left-item flex items-center ">
+                                        <div className="m-left-item flex items-center px-[20px] ">
                                             <FontAwesomeIcon icon={faFaceSmile} />
                                             <span className="pl-[12px] py-[8px] w-full block">Demo Page</span>
                                         </div> 
-                                        <div className="menu-icon">
-                                            <FontAwesomeIcon icon={faChevronRight} /> 
+                                        <div className="menu-icon pr-[12px] ">
+                                            <FontAwesomeIcon className={` transition-all  duration-300 ${subMenu === true ? 'rotate-[90deg] ' : 'rotate-[0deg]'}`} icon={faChevronRight} /> 
                                         </div>
+                                    </NavLink>
+                                    <ul className={`w-full bg-[#051f3e] py-3 h-full ${subMenu === false ? "hidden": "" }`}>
+                                        <li className="flex mb-1">
+                                            <NavLink className=" hover:bg-[#042954] block w-full pl-[60px] py-[7px]">
+                                                <FontAwesomeIcon className="text-[12px] mr-2" icon={faCircle} /> 
+                                                <span className="text-[15px] font-robotoFont " >Demo One</span>
+                                            </NavLink>
+                                        </li>
+                                        <li className="flex mb-1">
+                                            <NavLink className=" hover:bg-[#042954] block w-full pl-[60px] py-[7px]">
+                                                <FontAwesomeIcon className="text-[12px] mr-2" icon={faCircle} /> 
+                                                <span className="text-[15px] font-robotoFont " >Demo One</span>
+                                            </NavLink>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] " >
+                                    <NavLink className="flex items-center">
+                                        <FontAwesomeIcon icon={faCartShopping} />
+                                        <span className="pl-[12px] py-[8px] w-full block">Product</span> 
                                     </NavLink>
                                 </li>
                             </ul>
