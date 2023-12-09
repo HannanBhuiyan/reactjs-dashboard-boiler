@@ -39,7 +39,7 @@ const Sidebar = () => {
                         </NavLink>
                     </li>
                     <li className={`text-[17px] font-robotoFont py-[5px] border-b border-1 border-[#021933] ${subMenu === false ? "hover:bg-[#051f3e]" : ''} `} >
-                        <div className="flex justify-between items-center" onClick={subMenuHandler}>
+                        <div className="flex justify-between items-center cursor-pointer " onClick={subMenuHandler}>
                             <div className="m-left-item flex items-center px-[20px] " >
                                 <FontAwesomeIcon icon={faFaceSmile} />
                                 <span className="pl-[12px] py-[8px] w-full block">Demo Page</span>

@@ -9,6 +9,10 @@ import InvoicePage from "./pages/Invoice-Page";
 import ProfilePage from "./pages/Profile-Page";
 import NotificationPage from "./pages/Notification-Page";
 import MessagePage from "./pages/Message-Page";
+import LoginPage from "./pages/Login-Page";
+import RegisterPage from "./pages/Register-Page";
+import ForgetPassword from "./pages/ForgetPassword-Page";
+import OtpPage from "./pages/Otp-Page";
 
 
 
@@ -22,6 +26,10 @@ const App = () => {
           <Route path="/demo" element={<DemoPage />} /> 
           <Route path="/demo-two" element={<DemoTwo />} /> 
           <Route path="/invoice" element={<InvoicePage />} /> 
+          <Route path="/login" element={<LoginPage />} /> 
+          <Route path="/register" element={<RegisterPage />} /> 
+          <Route path="/forget-password" element={<ForgetPassword />} /> 
+          <Route path="/verify-otp" element={<OtpPage />} /> 
           <Route path="/profile" element={<ProfilePage />} /> 
           <Route path="/notification/:notificationName" element={<NotificationPage />} /> 
           <Route path="/message" element={<MessagePage />} /> 
