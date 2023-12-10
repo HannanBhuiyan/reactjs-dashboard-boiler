@@ -11,7 +11,7 @@ const RegisterPage = () => {
                         <div className=" w-4/12 mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
                             <div className="mb-10">
                                 <h2 className="text-[45px] font-robotoFont font-medium text-[#253D4] " >Create an Account</h2>
-                                <p className="text-[18px] font-robotoFont mt-1 ">Already have an account? <Link to="/login" className=" text-primaryColor">Login</Link> </p>
+                                <p className="text-[18px] font-robotoFont mt-1 ">Already have an account? <Link to="/" className=" text-primaryColor">Login</Link> </p>
                             </div>
                             <form action="" >
                                 <div className="form_group mb-7">

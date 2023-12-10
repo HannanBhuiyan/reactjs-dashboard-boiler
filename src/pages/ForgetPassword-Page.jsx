@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import forgot_password from '../assets/images/forgot_password.svg'
 
 const ForgetPassword = () => {
 
@@ -10,6 +11,7 @@ const ForgetPassword = () => {
                     <div className="forget_password_inner">
                         <div className=" w-4/12 mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
                             <div className="mb-6">
+                                <img src={forgot_password} alt="" className="my-[20px]" />
                                 <h2 className="text-[40px] font-robotoFont font-medium text-[#253D4] " >Forgot your password?</h2>
                                 <p className="text-[17px] font-robotoFont mt-1 "> Not to worry, we got you! Let’s get you a new password. Please enter your email address or your Username.</p>
                             </div>
