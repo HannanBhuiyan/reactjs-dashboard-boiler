@@ -4,4 +4,8 @@
 # Pages
     1. Login page
     2. Register page
-    
+    3. Forget Password Page
+    4. OTP Page
+    5. Reset Password Page
+    6. Dashboard 
+    7. Others....
