@@ -6,13 +6,13 @@ const ForgetPassword = () => {
 
     return (
         <>
-            <div className="forget_password bg-[#F0F1F3] h-screen flex items-center ">
+            <div className="forget_password bg-[#F0F1F3] max-lg:p-[30px]  h-screen flex items-center ">
                 <div className="container mx-auto">
                     <div className="forget_password_inner">
-                        <div className=" w-4/12 mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
+                        <div className=" xl:w-4/12 md:w-6/12 w-full mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
                             <div className="mb-6">
                                 <img src={forgot_password} alt="" className="my-[20px]" />
-                                <h2 className="text-[40px] font-robotoFont font-medium text-[#253D4] " >Forgot your password?</h2>
+                                <h2 className="text-[40px] max-lg:text-[30px] max-sm:text-[22px]  font-robotoFont font-medium text-[#253D4] " >Forgot your password?</h2>
                                 <p className="text-[17px] font-robotoFont mt-1 "> Not to worry, we got you! Let’s get you a new password. Please enter your email address or your Username.</p>
                             </div>
                             <form action="" > 

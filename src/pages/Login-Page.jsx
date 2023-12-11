@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const LoginPage = () => {
     return (
         <>
-            <div className="login_page bg-[#F0F1F3] h-screen flex items-center ">
+            <div className="login_page max-lg:p-[30px] bg-[#F0F1F3]  max-lg:h-full h-screen flex items-center ">
                 <div className="container mx-auto">
                     <div className="login_page_inner">
-                        <div className=" w-4/12 mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
+                        <div className=" xl:w-4/12 md:w-6/12 w-full max- mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
                             <div className="mb-10">
                                 <h2 className="text-[45px] font-robotoFont font-medium text-[#253D4E] " >Login</h2>
                                 <p className="text-[18px] font-robotoFont mt-1 ">Don't have an account? <Link to="/register" className=" text-primaryColor " >Create here</Link> </p>
@@ -28,14 +28,14 @@ const LoginPage = () => {
                                     type="password" 
                                     placeholder="Enter Password" />
                                 </div>
-                                <div className="flex justify-between items-center my-[50px] ">
+                                <div className=" max-sm:flex-wrap flex justify-between items-center my-[50px] ">
                                     <div>
                                         <label className="cursor-pointer hover:text-primaryColor transition-all duration-300 " >
                                             <input type="checkbox" />
                                             <span className="text-[17px] ml-2 font-robotoFont" >Remember me</span>
                                         </label>
                                     </div>
-                                    <div>
+                                    <div className="max-sm:mt-3">
                                         <Link to="/forget-password" className="text-[17px] font-robotoFont hover:text-primaryColor duration-300 transition-all " >Forgot password?</Link>
                                     </div>
                                 </div>

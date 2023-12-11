@@ -5,12 +5,12 @@ const RegisterPage = () => {
 
     return (
         <>
-            <div className="register_page bg-[#F0F1F3] h-screen flex items-center ">
+            <div className="register_page bg-[#F0F1F3] max-lg:h-full h-screen flex items-center max-lg:p-[30px] ">
                 <div className="container mx-auto">
                     <div className="register_page_inner">
-                        <div className=" w-4/12 mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
+                        <div className="xl:w-4/12 md:w-6/12 w-full mx-auto bg-white p-8 shadow-[0 16px 49px -15px rgba(0,0,0,0.3)] rounded-lg  ">
                             <div className="mb-10">
-                                <h2 className="text-[45px] font-robotoFont font-medium text-[#253D4] " >Create an Account</h2>
+                                <h2 className="text-[45px] font-robotoFont font-medium text-[#253D4] max-lg:text-[30px] max-sm:text-[25px] " >Create an Account</h2>
                                 <p className="text-[18px] font-robotoFont mt-1 ">Already have an account? <Link to="/" className=" text-primaryColor">Login</Link> </p>
                             </div>
                             <form action="" >
