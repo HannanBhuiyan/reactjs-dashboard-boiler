@@ -16,7 +16,7 @@ const DashboardPage = () => {
                         <li className=" font-robotoFont text-[13px] px-[6px]" >
                             <FontAwesomeIcon icon={faChevronRight} /> 
                         </li>
-                        <li className=" font-robotoFont text-[17px] text-primaryColor " >Dashbard</li>
+                        <li className="font-robotoFont text-[17px] text-primaryColor " >Dashbard</li>
                     </ul>
                </div>
             </MasterLayout>

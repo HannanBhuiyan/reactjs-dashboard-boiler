@@ -26,23 +26,23 @@ const Sidebar = () => {
         <>
             <div className="sidebar_menu text-white pb-[20px]">
                 <ul>
-                    <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] " >
-                        <NavLink   to="/" className="flex items-center">
+                    <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] max-xl:px-[10px] " >
+                        <NavLink   to="/dashboard" className="flex items-center">
                             <FontAwesomeIcon icon={faGauge} />
-                            <span className="pl-[12px] py-[8px] w-full block">Dashboard</span>
+                            <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px]">Dashboard</span>
                         </NavLink>
                     </li>
-                    <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] " >
+                    <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] max-xl:px-[10px]" >
                         <NavLink to="/product" className="flex items-center">
                             <FontAwesomeIcon icon={faCartShopping} />
-                            <span className="pl-[12px] py-[8px] w-full block">Product</span> 
+                            <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px]">Product</span> 
                         </NavLink>
                     </li>
                     <li className={`text-[17px] font-robotoFont py-[5px] border-b border-1 border-[#021933] ${subMenu === false ? "hover:bg-[#051f3e]" : ''} `} >
                         <div className="flex justify-between items-center cursor-pointer " onClick={subMenuHandler}>
-                            <div className="m-left-item flex items-center px-[20px] " >
+                            <div className="m-left-item flex items-center px-[20px] max-xl:px-[10px] " >
                                 <FontAwesomeIcon icon={faFaceSmile} />
-                                <span className="pl-[12px] py-[8px] w-full block">Demo Page</span>
+                                <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px] ">Demo Page</span>
                             </div> 
                             <div className="menu-icon pr-[12px] ">
                                 <FontAwesomeIcon icon={faChevronRight} /> 
@@ -51,7 +51,7 @@ const Sidebar = () => {
                         <ul className={`w-full bg-[#051f3e] py-3 h-full ${subMenu === false ? "hidden": "" }`}>
                             <li className="flex mb-1">
                                 <NavLink to="/demo" className={({isActive}) => isActive ? 'bg-[#042954] w-full block' : 'w-full'}>
-                                    <div className="hover:bg-[#042954] block w-full pl-[60px] py-[7px]">
+                                    <div className="hover:bg-[#042954] block w-full pl-[60px] py-[7px] max-xl:px-[10px]">
                                         <FontAwesomeIcon className="text-[12px] mr-2" icon={faCircle} /> 
                                         <span className="text-[15px] font-robotoFont " >Demo One</span>
                                     </div> 
@@ -59,7 +59,7 @@ const Sidebar = () => {
                             </li>
                             <li className="flex mb-1">
                                 <NavLink to="/demo-two" className={({isActive}) => isActive ? 'bg-[#042954] w-full block' : 'w-full'}>
-                                    <div className="hover:bg-[#042954] block w-full pl-[60px] py-[7px]">
+                                    <div className="hover:bg-[#042954] block w-full pl-[60px] py-[7px] max-xl:px-[10px]">
                                         <FontAwesomeIcon className="text-[12px] mr-2" icon={faCircle} /> 
                                         <span className="text-[15px] font-robotoFont " >Demo One</span>
                                     </div> 
@@ -68,10 +68,10 @@ const Sidebar = () => {
                             
                         </ul>
                     </li>
-                    <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] " >
+                    <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] px-[20px] py-[5px] max-xl:px-[10px] " >
                         <NavLink className="flex items-center">
                             <FontAwesomeIcon icon={faCartShopping} />
-                            <span className="pl-[12px] py-[8px] w-full block">Product</span> 
+                            <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px]">Product</span> 
                         </NavLink>
                     </li>
                 </ul>
