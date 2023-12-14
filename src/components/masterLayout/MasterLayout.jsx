@@ -17,7 +17,7 @@ const MasterLayout = (props) => {
                    <div className="sidebarInner">
                         <div className="sidebar_top flex items-center justify-between bg-primaryColor py-[24px] px-[20px] ">
                             <div className="sidebar_logo">
-                                <Link to="/" className="text-white text-[25px] font-bold " >CMS</Link>
+                                <Link to="/" className="text-white text-[25px] font-bold " >sPOS</Link>
                             </div>
                             <div className="bar">
                                 <div onClick={() => setSidebar(false)} className="bar_icon text-[22px] cursor-pointer text-white "><FontAwesomeIcon icon={faBars} /></div>

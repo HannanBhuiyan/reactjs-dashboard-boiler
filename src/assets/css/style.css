@@ -1,3 +1,23 @@
-
- 
 @import "progress.css";
+
+.submenuLi {
+    position: relative;
+
+}
+
+
+.close-sub-menu {
+    opacity: 0;
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .3s ease-in-out;
+}
+
+.open-sub-menu {  
+  height: auto;
+  opacity: 1;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: all .3s ease-in-out;
+}
