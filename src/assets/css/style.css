@@ -1,23 +1,45 @@
 @import "progress.css";
 
-.submenuLi {
-    position: relative;
-
-}
+ 
 
 
 .close-sub-menu {
-    opacity: 0;
-    height: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: all .3s ease-in-out;
+   display: none;
 }
 
 .open-sub-menu {  
-  height: auto;
+  display: block;
+}
+
+
+.open-nav-open,
+.close_side_nav,
+.content-expand,
+.main-body,
+.close-icon,
+.open-icon {
+  transition: all .5s ease-in-out;
+}
+
+.open-nav-open {
+  width: 280px;
+}
+
+.close_side_nav {
+  width: 0 !important;
+}
+.content-expand {
+  width: 100% !important;
+}
+
+.main-body {
+  width: calc(100% - 280px);
+}
+.close-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+.open-icon {
   opacity: 1;
-  transform-origin: top;
-  transform: scaleY(1);
-  transition: all .3s ease-in-out;
+  visibility: visible;
 }

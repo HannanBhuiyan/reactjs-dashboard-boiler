@@ -5,7 +5,7 @@ import { faTimes, faEnvelope, faBell, faCheck, faReceipt, faPowerOff, } from "@f
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import admin_img from '../../assets/images/admin.jpg'
 
-const TopBar = ({ sidebar, setSidebar }) => {
+const TopBar = ({sidebarNavRef, contentRef}) => {
 
     const refOne = useRef(null)
     const [admin, setAdmin] = useState(false)
@@ -43,13 +43,25 @@ const TopBar = ({ sidebar, setSidebar }) => {
         } 
     }
 
-   
+    const openSidebar = () => {
+        let sidebarNav = sidebarNavRef
+        let content = contentRef
+
+        if(sidebarNav.classList.contains("close_side_nav")){
+            sidebarNav.classList.remove("close_side_nav")
+            sidebarNav.classList.add('open-nav-open')
+            content.classList.remove("content-expand")
+    
+        }
+      
+    }
+
 
     return (
         <>
             <div className="topbar flex justify-between p-[22px] bg-white items-center shadow-topbar" ref={refOne}>
-                <div className="times_icon">
-                    { sidebar === false ?  <button className="text-black text-[20px] " onClick={() => { setSidebar(true) }} ><FontAwesomeIcon icon={faTimes} /></button> : '' }
+                <div className="times_icon" onClick={openSidebar}>
+                    <button className="text-black text-[20px]"><FontAwesomeIcon icon={faTimes} /></button> 
                 </div>
                 <div className="topbar_right flex items-center">  
                     <div className="message relative mt-3">
@@ -119,7 +131,6 @@ const TopBar = ({ sidebar, setSidebar }) => {
                         </div>
                     </div>
                     <div className="notification relative mx-10 mt-3">
-
                         <div onClick={notificationHandler} className="cursor-pointer">
                             <span className="absolute top-[-20px] right-[-14px] font-blod w-[30px] h-[30px] bg-[#ff3131] text-center text-white shadow-topbar rounded-full border-white border-[2px] " >6</span>
                             <FontAwesomeIcon className="text-[#7E7E7E] text-[20px] " icon={faBell} /> 

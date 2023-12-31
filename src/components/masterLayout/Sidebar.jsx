@@ -16,21 +16,14 @@ const Sidebar = () => {
 
     const subMenuHandler = () => {
        let submenu = subMenuRef
-
        if(submenu.classList.contains("close-sub-menu")){
             submenu.classList.add("open-sub-menu")
-            submenu.classList.remove("close-sub-menu")
-            // submenu.style.transition = "all .3s";
+            submenu.classList.remove("close-sub-menu") 
        }
        else {
             submenu.classList.remove("open-sub-menu")
-            submenu.classList.add("close-sub-menu")
-            // submenu.style.transition = "all .3s";
-            
+            submenu.classList.add("close-sub-menu") 
        }
-
-      
-       
     }
 
 
@@ -51,7 +44,7 @@ const Sidebar = () => {
             <div className="sidebar_menu text-white pb-[20px]">
                 <ul>
                     <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] py-[5px] max-xl:px-[10px] " >
-                        <NavLink onClick={handleChange} className={({isActive}) => isActive  ? "flex items-center bg-[#051f3e] px-[20px] " : "flex items-center px-[20px] " }>
+                        <NavLink to="/dashboard" onClick={handleChange} className={({isActive}) => isActive  ? "flex items-center bg-[#051f3e] px-[20px] " : "flex items-center px-[20px] " }>
                             <FontAwesomeIcon icon={faGauge} />
                             <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px]">Dashboard</span>
                         </NavLink>
@@ -59,11 +52,11 @@ const Sidebar = () => {
                     <li className="text-[17px] border-b border-1 border-[#021933] font-robotoFont hover:bg-[#051f3e] py-[5px] max-xl:px-[10px]" >
                         <NavLink to="/product" className={({isActive}) => isActive  ? "flex items-center bg-[#051f3e] px-[20px] " : "flex items-center px-[20px] " }>
                             <FontAwesomeIcon icon={faCartShopping} />
-                            <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px]">Product</span>
+                            <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px]">Product Category</span>
                         </NavLink>
                     </li>
                     <li className=" submenuLi text-[17px] font-robotoFont py-[5px] border-b border-1 border-[#021933]">
-                        <div className="flex justify-between items-center cursor-pointer " onClick={subMenuHandler}>
+                        <NavLink className="flex justify-between items-center cursor-pointer" onClick={subMenuHandler}>
                             <div className="m-left-item flex items-center px-[20px] max-xl:px-[10px] " >
                                 <FontAwesomeIcon icon={faFaceSmile} />
                                 <span className="pl-[12px] py-[8px] w-full block max-lg:text-[14px] max-xl:text-[15px] ">Demo Page</span>
@@ -71,7 +64,7 @@ const Sidebar = () => {
                             <div className="menu-icon pr-[12px] ">
                                 <FontAwesomeIcon icon={faChevronRight} /> 
                             </div>
-                        </div> 
+                        </NavLink> 
                         <ul ref={(div) => subMenuRef=div} className="close-sub-menu w-full bg-[#051f3e] py-3 h-full">
                             <li className="flex mb-1">
                                 <NavLink to="/demo" className={({isActive}) => isActive ? 'bg-[#042954] w-full block' : 'w-full'}>
@@ -88,8 +81,7 @@ const Sidebar = () => {
                                         <span className="text-[15px] font-robotoFont " >Demo One</span>
                                     </div> 
                                 </NavLink>
-                            </li>
-                            
+                            </li> 
                         </ul> 
                       
                     </li>
