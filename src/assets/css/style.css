@@ -18,11 +18,11 @@
 .main-body,
 .close-icon,
 .open-icon {
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .open-nav-open {
-  width: 280px;
+  width: 250px;
 }
 
 .close_side_nav {
@@ -33,7 +33,7 @@
 }
 
 .main-body {
-  width: calc(100% - 280px);
+  width: calc(100% - 250px);
 }
 .close-icon {
   opacity: 0;
@@ -42,4 +42,22 @@
 .open-icon {
   opacity: 1;
   visibility: visible;
+}
+.text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis !important;
+  display: inline-block !important;
+}
+ 
+.menu-icon svg {
+  transform: rotate(90deg);
+  color: #ffa901;
+  transition: all .3s ease-in-out;
+}
+.menu-rv-icon svg {
+  transform: rotate(0deg);
+  color: unset;
+  transition: all .3s ease-in-out;
 }

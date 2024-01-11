@@ -15,6 +15,7 @@ import ForgetPassword from "./pages/ForgetPassword-Page";
 import OtpPage from "./pages/Otp-Page";
 import ResetPassword from "./pages/ResetPassword-Page";
 import FullScreenLoader from "./components/masterLayout/FullScreenLoader";
+import CategoryPage from "./pages/Category-Page";
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/" element={<LoginPage />} /> 
           <Route path="/dashboard" element={<DashboardPage />} /> 
           <Route path="/product" element={<ProductPage />} /> 
+          <Route path="/category" element={<CategoryPage />} /> 
           <Route path="/demo" element={<DemoPage />} /> 
           <Route path="/demo-two" element={<DemoTwo />} /> 
           <Route path="/invoice" element={<InvoicePage />} /> 
